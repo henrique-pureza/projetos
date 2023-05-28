@@ -1,0 +1,85 @@
+Dicionário HTML
+
+# Estrutura básica
+
+<!DOCTYPE html>: ajuda o navegador a exibir melhor a página
+<html></html>: início e fim do documento HTML
+
+# Comentário
+
+<!-- Comentários em HTML tem essa estrutura -->
+
+# Cabeçalho
+
+<head></head>: cabeçalho do documento, onde vão informações referentes a documentos CSS e JavaScript externos, responsividade do site e caracteres
+
+<title></title>: título da página exibido na aba do navegador
+
+<meta charset="utf-8" />: diz ao navegador que o site usa utf-8, na prática faz o site aceitar todos os acentos
+<meta name="viewport" content="width-device-width, initial-scale=1" />: torna o texto do site responsivo (se adapta conforme o tamanho da tela)
+
+<link rel="stylesheet" href="style.css" />: importa o arquivo CSS "style.css"
+
+# Tags de texto
+
+<body></body>: corpo do documento, o que o usuário vê na página
+<h1></h1>: tag especial do HTML, usada para títulos; vai de h1 até h6
+<p></p>: tag usada para parágrafos
+<i></i>: itálico
+<b></b>: negrito
+<s></s>: tachado
+<sub></sub>: subscrito
+<sup></sup>: sobrescrito
+<br />: quebra de linha
+<t></t>: texto, tag usada para modificar no CSS
+
+# Imagens, links e fonte
+
+<img src="link da imagem" alt="descrição da imagem quando passa o mouse em cima" />: imagem
+
+<a href="link-interno.html">link interno</a>
+<a href="https://link-externo.com.br">link externo</a>
+<a href="#section">link de seção</a> / <a href="#1">Seção 1</a> (redireciona para itens com id="1")
+
+<font size="6" color="red"></font>: texto com fonte modificada (diretamente no HTML, porém, é recomendável usar CSS)
+
+# Tabelas
+
+<table border="tamanho da borda (número)" width="largura (número em px)" height="altura (número em px)"></table>: cria uma tabela
+<tr></tr>: coluna
+<th></th>: cabeçalho da tabela
+<td></td>: linha
+
+# Formulário
+
+<form action="página de resultado.html" method="POST (postar)">: cria formulário
+
+<input type="text (caixa de texto)" maxlength="30" name="nome" placeholder="Seu nome (texto que aparece quando a caixa de texto está vazia)" required (obrigatório preencher) />: cria caixa de texto
+
+<input type="number (só aceita números)" name="numero" placeholder="Digite um número" required />: cria caixa de texto que só aceita números
+
+<input type="radio (botão de rádio)" name="time" value="Brasil (opção do botão de rádio)" checked (pré-selecionado) /> Brasil (para aparecer o nome da opção devemos digitá-lo, senão aparece só o botão): botão de rádio
+
+<select name="comida"></select>: cria uma combobox
+<option value="Pizza"> Pizza </option>: opção da combobox
+
+<textarea name="mensagem" min="3 (mínimo de caracteres)" max="100 (máximo de caracteres)" rows="10 (10 linhas)" cols="30 (30 colunas)" placeholder="Escreva uma mensagem"></textarea>: cria uma caixa de texto redimensionável
+
+<button onclick="funcao_javascript()">Botão</button>: botão que ao ser clicado executa a função javascript "onclick()"
+<input type="submit" value="Enviar" />: botão de enviar
+<input type="reset" value="Apagar" />: botão de apagar
+
+# CSS
+
+<p class="titulo"></p>: p com a classe titulo (classe pode ser atribuída a mais de um elemento)
+<p id="titulo"></p>: p com o id titulo (id só pode ser atribuído a um único elemento)
+
+# DIV
+
+<div class="topnav"></div>: divisão do site onde itens ficam dentro
+
+# Lista
+
+<ol type="I (I, II, III...)" reversed (decrescente)></ol>: lista ordenada
+<ul class="ulstyle"></ul>: lista não ordenada
+<li></li>: item da lista

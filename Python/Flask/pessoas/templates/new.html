@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %} Novo {% endblock %}
+
+{% block content %}
+
+    <h1 class="mb-3">Nova pessoa</h1>
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input
+                type="text"
+                placeholder="Nome"
+                class="form-control"
+                name="nome"
+                id="nome"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="sobrenome" class="form-label">Sobrenome:</label>
+            <input
+                type="text"
+                placeholder="Sobrenome"
+                class="form-control"
+                name="sobrenome"
+                id="sobrenome"
+            />
+        </div>
+        <div class="mb-3">
+            <label for="idade" class="form-label">Idade:</label>
+            <input
+                type="number"
+                placeholder="Idade"
+                class="form-control"
+                name="idade"
+                id="idade"
+                min="0"
+            />
+        </div>
+        <div class="mb-3">
+            <span class="form-label me-3">Sexo:</span>
+            <div class="form-check form-check-inline">
+                <input
+                    type="radio"
+                    class="form-check-input"
+                    name="sexo"
+                    id="masculino"
+                    value="Masculino"
+                />
+                <label for="masculino" class="form-check-label">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input
+                    type="radio"
+                    class="form-check-input"
+                    name="sexo"
+                    id="feminino"
+                    value="Feminino"
+                    checked
+                />
+                <label for="feminino" class="form-check-label">Feminino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input
+                    type="radio"
+                    class="form-check-input"
+                    name="sexo"
+                    value="Não-binárie"
+                    id="nao-binarie"
+                />
+                <label for="nao-binarie" class="form-check-label">Não-binárie</label>
+            </div>
+        </div>
+        <a href="/" class="btn btn-secondary">Cancelar</a>
+        <input type="submit" value="Criar" class="btn btn-primary" />
+    </form>
+
+{% endblock %}

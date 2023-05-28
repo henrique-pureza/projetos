@@ -1,0 +1,108 @@
+{% extends "teste_App/base_template.html" %}
+
+{% block content %}
+
+    {% load bootstrap_icons %}
+
+    <div class="d-flex flex-row align-items-center position-relative">
+        <p class="fs-1 m-0 mb-3">Carros</p>
+        <a class="btn btn-primary position-absolute" style="right: 0;" href="/new">
+            {% bs_icon "plus-lg" size="20px" %}
+        </a>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for carro in carros %}
+                <tr>
+                    {% for item in carro %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                    <td>
+                        <a href="/showEdit/?marca={{ carro.0 }}&modelo={{ carro.1 }}&ano={{ carro.2 }}&cor={{ carro.3 }}" class="btn btn-primary">
+                            {% bs_icon "pencil-square" %}
+                        </a>
+                        <a href="/delete/?marca={{ carro.0 }}&modelo={{ carro.1 }}&ano={{ carro.2 }}&cor={{ carro.3 }}" class="btn btn-danger">
+                            {% bs_icon "trash" %}
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="editModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Editar carro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" class="m-0 p-0">
+                        {% csrf_token %}
+
+                        <div class="form-group mb-3">
+                            <div class="mb-1">
+                                {{ form.marca.label_tag }}
+                            </div>
+                            {{ form.marca }}
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="mb-1">
+                                {{ form.modelo.label_tag }}
+                            </div>
+                            {{ form.modelo }}
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="mb-1">
+                                {{ form.ano.label_tag }}
+                            </div>
+                            {{ form.ano }}
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="mb-1">
+                                {{ form.cor.label_tag }}
+                            </div>
+                            {{ form.cor }}
+                        </div>
+
+                        {% if error %}
+                            <div class="alert alert-danger">
+                                Erro ao editar o carro.
+                            </div>
+                        {% endif %}
+
+                        <div class="modal-footer">
+                            <a href="/cancelEdit/" class="btn btn-secondary">Cancelar</a>
+                            <input type="submit" class="btn btn-primary" value="Editar" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const editModal = new bootstrap.Modal($("#editModal"));
+
+        {% if showModal %}
+            editModal.show();
+
+            $("#marca").val("{{ getMarca }}");
+            $("#modelo").val("{{ getModelo }}");
+            $("#ano").val("{{ getAno }}");
+            $("#cor").val("{{ getCor }}");
+        {% endif %}
+    </script>
+
+{% endblock %}

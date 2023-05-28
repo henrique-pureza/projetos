@@ -1,0 +1,13 @@
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\bin\Release\Calculadora de Divisores.exe.manifest
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\bin\Release\Calculadora de Divisores.application
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\bin\Release\Calculadora de Divisores.exe
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\bin\Release\Calculadora de Divisores.pdb
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.csproj.AssemblyReference.cache
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora_de_Divisores.App.resources
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora_de_Divisores.Properties.Resources.resources
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.csproj.GenerateResource.cache
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.csproj.CoreCompileInputs.cache
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.exe.manifest
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.application
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.exe
+C:\Users\henri\OneDrive\Documentos\main\C#\Calculadora de Divisores\obj\Release\Calculadora de Divisores.pdb

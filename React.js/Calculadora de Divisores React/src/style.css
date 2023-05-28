@@ -1,0 +1,44 @@
+#root {
+    font-family: 'Roboto', 'Liberation Sans', sans-serif;
+}
+
+.visor {
+    text-align: right;
+    height: 20vh;
+}
+
+.corpo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.elementos {
+    height: 89vh;
+}
+
+.botoes {
+    display: block;
+    height: 73.7%; 
+}
+
+.botao {
+    min-width: 33%;
+    min-height: 100%;
+}
+
+.linha1, .linha { 
+    height: 23.7%;  
+}
+
+.linha1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}

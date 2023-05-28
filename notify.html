@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notify</title>
+    </head>
+    <body>
+        <h1>Notify</h1>
+
+        <script>
+            // Verifica se o navegador suporta notificações
+            if ('Notification' in window) {
+            // Solicita permissão para exibir notificações
+            Notification.requestPermission()
+                .then(permission => {
+                if (permission === 'granted') {
+                    // Cria várias notificações
+                    for (let i = 1; i <= 5; i++) {
+                        const notification = new Notification('Notificação ' + i, {
+                            body: 'Esta é a notificação ' + i,
+                            icon: 'caminho/para/o/icone.png' // Substitua pelo caminho do ícone desejado
+                        });
+
+                        // Define um evento de clique na notificação
+                        notification.onclick = () => {
+                            // Aqui você pode definir o que acontece ao clicar na notificação
+                            console.log('Notificação ' + i + ' foi clicada.');
+                        };
+
+                        // Fecha a notificação após 5 segundos (5000 milissegundos)
+                        setTimeout(() => {
+                            notification.close();
+                        }, 5000);
+                    }
+                }
+                })
+                .catch(error => {
+                console.error('Erro ao solicitar permissão para notificações:', error);
+                });
+            } else {
+            console.error('Este navegador não suporta notificações.');
+            }
+        </script>
+    </body>
+</html>

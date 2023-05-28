@@ -1,0 +1,45 @@
+{% extends "teste_App/base_template.html" %}
+
+{% block content %}
+
+    <p class="fs-1 m-0 mb-3">Criar carro</p>
+
+    <form method="post" class="m-0 p-0">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <div class="mb-1">
+                {{ form.marca.label_tag }}
+            </div>
+            {{ form.marca }}
+        </div>
+        <div class="mb-3">
+            <div class="mb-1">
+                {{ form.modelo.label_tag }}
+            </div>
+            {{ form.modelo }}
+        </div>
+        <div class="mb-3">
+            <div class="mb-1">
+                {{ form.ano.label_tag }}
+            </div>
+            {{ form.ano }}
+        </div>
+        <div class="mb-3">
+            <div class="mb-1">
+                {{ form.cor.label_tag }}
+            </div>
+            {{ form.cor }}
+        </div>
+
+        {% if error %}
+            <div class="alert alert-danger">
+                Erro ao criar o carro.
+            </div>
+        {% endif %}
+
+        <input type="submit" value="Criar" class="btn btn-primary">
+        <a href="/" class="btn btn-secondary">Voltar</a>
+    </form>
+
+{% endblock %}

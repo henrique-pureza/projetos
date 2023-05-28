@@ -1,0 +1,47 @@
+*, pre
+  font-family: Arial, Helvetica, sans-serif
+
+pre
+  font-size: 12pt
+
+body
+  margin: 0
+  padding: 0
+
+  background-color: #222233
+  color: #EEE
+
+.wrapper
+  width: 100%
+  height: 100vh
+  position: relative
+
+  .chat-stack
+    display: flex
+    flex-direction: column
+
+  .footer
+    position: absolute
+    bottom: 0
+
+    background-color: #222233
+    border-top: 1px #333344 solid
+
+    .chat-controls
+      display: flex
+      flex-direction: row
+
+      .prompt
+        background-color: #222233
+        border-color: #444455
+        color: #EEE
+
+      .submit-button
+        background-color: #222233
+        border-color: #444455
+
+        &:hover
+          background-color: #444455
+
+        &:active
+          background-color: #555566

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notificação</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background: linear-gradient(135deg, #0000FF, #FF00FF) no-repeat;
+                height: 100vh;
+
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                background-color: #CCC;
+                padding: 1rem;
+
+                border: 3px #000 solid;
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title {
+                text-align: center;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+
+            .button {
+                background-color: #FFF;
+                border: 4px #000 solid;
+                border-radius: 10px;
+
+                padding: 1rem;
+
+                font-size: 14pt;
+                font-weight: bold;
+            }
+
+            .button:hover {
+                background-color: #CCC;
+            }
+
+            .button:active {
+                background-color: #AAA;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <h1 class="title">Notificação</h1>
+                <button
+                    class="button"
+                    id="notificador"
+                >Notificar</button>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("notificador").addEventListener("click", async function() {
+                const permission = await Notification.requestPermission();
+
+                if (permission === "granted") {
+                    new Notification("Notificação", {
+                        body: "Teste",
+                        icon: "./icon.png"
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

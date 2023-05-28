@@ -1,0 +1,98 @@
+Dicionário JavaScript
+
+// Comentários tem essa estrutura
+
+# Variáveis / Objetos
+
+=> JS é uma linguagem fracamente tipada, ou seja, as variáveis/objetos aceitam qualquer tipo de informação.
+
+const constante = valor; (cria objeto constante, após ser criado não muda mais)
+let variável = valor; (cria variável que só vale dentro de um escopo [chaves])
+var variável = valor; (cria variável global)
+
+# Funções
+
+=> Existem dois métodos de criar uma função, usando const (mais rápido) e function (mais lento)
+
+const funcao = (parâmetros, se houver) => {
+  código
+}
+function funcao(parâmetros, se houver) {
+  código
+}
+
+# Funções assíncronas
+
+=> Tipo especial de função que permite que o resto do código seja executado ao mesmo tempo (usada para operações que podem demorar, para permitir que o resto da página seja carregado)
+
+const funcao = async(parâmetros, se houver) => {
+  código
+}
+async function(parâmetros, se houver) => {
+  código
+}
+
+# Await
+
+=> Condição especial que garante que um valor somente seja atribuído a um objeto depois que uma operação seja totalmente concluída (usado para requisições em bancos de dados)
+
+const objeto = await (operação)
+
+# Document
+
+document.getElementById("id"); (obtêm dados de todos os elementos com o id especificado)
+document.getElementsByClassName("class"); (obtêm dados de todos os elementos da classe especificada)
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Tecla") {
+   código
+  }
+}) (executa um código quando a tecla especificada for pressionada)
+
+# AJAX/JQuery
+
+$("#id").algo(); (igual ao document.getElementById; extrai a propriedade especificada do elemento com o id especificado)
+$(".class").algo() (igual ao document.getElementsByClassName; extrai a propriedade especificada dos elementos com a classe especificada)
+
+# Métodos de console
+
+console.log() => imprime algo na tela
+console.error() => imprime algo na tela como se fosse um erro
+console.clear() => limpa a tela
+console.time() / console.timeEnd() => conta o tempo que uma operação leva para ser executada
+console.table() => gera uma tabela na tela
+console.count() => conta quantas vezes a mesma função foi executada
+
+# Outras funções
+
+window.navegator.vibrate(300);
+=> Aciona a vibração do celular por 300ms
+window.print();
+=> Imprime o conteúdo da página (abre a caixa de diálogo de imprimir)
+
+# Laços de repetição
+
+=> For
+for (let i = 0; i < 10; i++) {
+
+}
+=> While
+let i = 0;
+while (i < 10) {
+    i++;
+}
+=> do While
+let count = 0;
+do {
+    count++;
+} while (count < 10);
+=> for ... in
+const friends = ['alex', 'john']
+for (let elm in friends) {
+    console.log(elm)
+}
+=> for ... of
+const friends = ['alex', 'john']
+for (let elm of friends) {
+    console.log(elm)
+}

@@ -1,0 +1,151 @@
+$track-height: 5px
+$thumb-height: 15px
+
+*
+    font-family: Roboto, Arial, Helvetica, sans-serif
+
+body
+    margin: 0
+    padding: 0
+    background-color: #000
+
+.player
+    height: 100vh
+
+    position: relative
+
+    .video-container
+        width: 100%
+        height: 100%
+
+        overflow: hidden
+
+        .video
+            width: 100%
+            height: 100%
+
+    .controls
+        position: absolute
+        bottom: 0
+
+        width: 100%
+
+        background-color: rgba(0,0,0,.3)
+        display: flex
+        flex-direction: column
+
+        .progress-bar
+            -webkit-appearance: none
+
+            background: #AAA
+            background-image: linear-gradient(#FF0000, #FF0000)
+            background-repeat: no-repeat
+
+            cursor: pointer
+
+            &::-webkit-slider-thumb
+                -webkit-appearance: none
+
+                background-color: #FF0000
+
+                width: 15px
+                height: $thumb-height
+
+                border-radius: 50%
+
+                margin-top: calc(($track-height / 2) - ($thumb-height / 2))
+
+            &::-webkit-slider-runnable-track
+                height: $track-height
+
+                background-color: transparent
+
+        .buttons
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            position: relative
+
+            padding: .5rem
+
+            .button
+                border: none
+                background: transparent
+                margin-right: .5rem
+                color: #FFF
+
+                display: flex
+                justify-content: center
+                align-items: center
+
+                cursor: pointer
+
+                .btn-img
+                    width: 25px
+                    height: 25px
+
+            .left-buttons
+                display: flex
+                flex-direction: row
+                align-items: center
+
+                .volume-track
+                    display: none
+                    align-items: center
+
+                    width: 175px
+
+                    .volume-range
+                        margin-right: .5rem
+
+                        -webkit-appearance: none
+
+                        background: #AAA
+                        background-image: linear-gradient(#FF0000, #FF0000)
+                        background-repeat: no-repeat
+
+                        cursor: pointer
+
+                        animation: open .3s
+
+                        &::-webkit-slider-thumb
+                            -webkit-appearance: none
+
+                            background-color: #FF0000
+
+                            width: 15px
+                            height: $thumb-height
+
+                            border-radius: 50%
+
+                            margin-top: calc(($track-height / 2) - ($thumb-height / 2))
+
+                        &::-webkit-slider-runnable-track
+                            width: 175px
+                            height: $track-height
+
+                            background-color: transparent
+
+                    .volume-number
+                        color: #FFF
+
+                        margin: 0
+                        margin-right: 1rem
+                        padding: 0
+
+                .video-time
+                    margin: 0
+                    padding: 0
+
+                    color: #FFF
+
+            .fullscreen-button
+                position: absolute
+                right: 0
+
+@keyframes open
+    from
+        width: 0
+    to
+        width: 175px

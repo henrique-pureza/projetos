@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block header %}
+
+<a href="/new" class="btn btn-primary">
+    <i class="bi bi-plus-lg"></i>
+</a>
+
+{% endblock %}
+
+{% block content %}
+
+    <h1>Pessoas</h1>
+
+    <table class="table">
+        <thead>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Ações</th>
+        </thead>
+        <tbody>
+            {% for pessoa in pessoas %}
+                <tr>
+                    {% for item in pessoa %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                    <td>
+                        <button class="btn btn-primary" onclick='openEditModal("{{ pessoa.0 }}", "{{ pessoa.1 }}", "{{ pessoa.2 }}", "{{ pessoa.3 }}")'>
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button class="btn btn-danger" onclick='deletarPessoa("{{ pessoa.0 }}", "{{ pessoa.1 }}")'>
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Editar pessoa</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input
+                            type="text"
+                            placeholder="Nome"
+                            class="form-control"
+                            name="nome"
+                            id="nome"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="sobrenome" class="form-label">Sobrenome:</label>
+                        <input
+                            type="text"
+                            placeholder="Sobrenome"
+                            class="form-control"
+                            name="sobrenome"
+                            id="sobrenome"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <label for="idade" class="form-label">Idade:</label>
+                        <input
+                            type="number"
+                            placeholder="Idade"
+                            class="form-control"
+                            name="idade"
+                            id="idade"
+                            min="0"
+                        />
+                    </div>
+                    <div class="mb-3">
+                        <span class="form-label me-3">Sexo:</span>
+                        <div class="form-check form-check-inline">
+                            <input
+                                type="radio"
+                                class="form-check-input"
+                                name="sexo"
+                                id="masculino"
+                                value="Masculino"
+                            />
+                            <label for="masculino" class="form-check-label">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input
+                                type="radio"
+                                class="form-check-input"
+                                name="sexo"
+                                id="feminino"
+                                value="Feminino"
+                            />
+                            <label for="feminino" class="form-check-label">Feminino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input
+                                type="radio"
+                                class="form-check-input"
+                                name="sexo"
+                                value="Não-binárie"
+                                id="nao-binarie"
+                            />
+                            <label for="nao-binarie" class="form-check-label">Não-binárie</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" onclick="edit()">Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

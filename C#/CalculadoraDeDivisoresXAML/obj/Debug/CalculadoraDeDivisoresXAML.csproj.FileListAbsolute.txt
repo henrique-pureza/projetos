@@ -1,0 +1,13 @@
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\bin\Debug\CalculadoraDeDivisoresXAML.exe
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\bin\Debug\CalculadoraDeDivisoresXAML.pdb
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.csproj.AssemblyReference.cache
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\App.g.cs
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML_MarkupCompile.cache
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.g.resources
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.Properties.Resources.resources
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.csproj.GenerateResource.cache
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.csproj.CoreCompileInputs.cache
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.exe
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\CalculadoraDeDivisoresXAML.pdb
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\Calculadora.baml
+C:\Users\henri\OneDrive\Documentos\main\UWP\CalculadoraDeDivisoresXAML\obj\Debug\Calculadora.g.cs

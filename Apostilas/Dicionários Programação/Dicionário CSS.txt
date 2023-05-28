@@ -1,0 +1,111 @@
+Dicionário CSS
+
+# Comentário
+
+/* Comentários em CSS tem essa estrutura */
+
+# Atribuições
+
+body (aplica o estilo para todo o body) {
+
+}
+
+h1 (aplica o estilo para todas as tags h1) {
+
+}
+
+.titulo (aplica para todos os elementos com a *classe* titulo)  {
+
+}
+
+p.titulo (aplica para todos os elementos *p* com a *classe* titulo {
+
+}
+
+#titulo (aplica para todos os elementos com o id titulo {
+
+}
+
+* (aplica para todos os elementos do documento HTML) {
+
+}
+
+.topnav a (aplica para todos os elementos "a" dentro de um elemento com a classe "topnav") {
+
+}
+
+.vertical:hover (aplica para todos os elementos com classe vertical quando passar o mouse em cima) {
+
+}
+
+# Texto
+
+font-family: Arial, sans-serif; (define a fonte do texto para Arial; caso Arial não esteja instalada no computador o texto vai ser exibido com a fonte sans-serif padrão do navegador)
+
+font-style: italic; (texto em itálico)
+font-weight: bold; (texto em negrito)
+text-decoration: underline; (texto sublinhado)
+text-decoration: line-trough; (texto tachado)
+
+text-align: center; (alinhamento do texto, também pode ser "justified" para justificado)
+
+# Margin e padding
+
+margin: 2em; (define um espaçamento em torno da parte de fora da borda do elemento, se definida)
+margin-top / margin-right / margin-bottom / margin-left (margin para cada um dos lados do elemento)
+padding: 14px 16px; (cria espaço entre um elemento e sua borda [nesse exemplo é 14px na horizontal e 16 na vertical)
+padding-top / padding-right / padding-bottom / padding-left (padding para cada um dos lados do elemento)
+
+# Cores
+
+=> Podem ser descritas em inglês, hexadecimal, rgb ou rgba
+
+color: white / #fff; (cor do texto)
+background-color: black / #000; (cor de fundo da página)
+
+# Imagem de fundo
+
+background-image: url("imagem.jpg");
+
+# Sombra de texto
+
+text-shadow: 3px 2px red;
+
+# Borda
+
+border: 5px solid Red; (cria uma borda sólida vermelha de 5px de espessura em volta do elemento)
+border-style: solid / dotted / dashed / inset / outset / ridge / groove / none; (estilo de borda: completa / pontilhada / tracejada / "abaixada" / "subida" / "moldura" / "moldura pequena" / nenhuma)
+border-width: 5px; (espessura da borda [pode ser especificada em px ou como "medium"], pode ser alterada na ordem cima/direita/baixo/esquerda)
+box-sizing: border-box; (permite que uma borda não modifique o tamanho original de um elemento)
+
+# Overflow
+
+overflow: visible / hidden / scroll / auto; (define o que acontece quando um elemento for maior do que o tamanho da página: visible - não corta o restante do elemento; hidden - corta o excesso, que fica invisível; scroll - adiciona uma barra de rolagem; auto - adiciona uma barra de rolagem somente quando necessário)
+
+# Display
+
+display: block / inline / inline-block / flex / initial / inherit / none; (define como um elemento HTML será renderizado: block - ocupa 100% da largura e inicia em nova linha, inline - ocupa apenas o espaço necessário para exibir seu conteúdo, inline-block - elementos lado a lado podendo definir largura e altura, flex - responsivo, initial - valor padrão, inherit - herda do objeto pai, none - remove o elemento)
+
+# Float
+
+float: left / right / none / initial / inherit; (elemento fica à esquerda ou direita em uma div [none - padrão, initial - valor padrão, inherit - objeto pai)
+
+# @media
+
+@media only screen and (max-width: 620px) {
+  .menu,
+  .main,
+  .right {
+    width: 100%; (torna os elementos das classes menu, main e right com tamanho responsivo)
+  }
+}
+
+=> Define que algo vai acontecer caso a largura da janela do navegador seja menor que 620px
+
+# Lista
+
+list-style-type: disc / circle / square / decimal / decimal-leading-zero / lower-alpha / upper-alpha / none; (estilo de lista: disc - círculo cheio; circle - círculo vazado; square - quadrado; decimal - 1, 2, 3; decimal-leading-zero - 01, 02, 03; lower-alpha - a, b, c; upper-alpha - A, B, C; none - sem identificador de lista)
+
+# Position
+
+position: static / relative / fixed / absolute / sticky; (especifica o tipo de posicionamento usado por um elemento: static - canto superior esquerdo da página (padrão); relative - posicionado em relação a sua posição original (usando as propriedades top, right, bottom ou left); fixed - permanece na mesma posição até quando a página é rolada; absolute - se o elemento pai tiver position: static, vai se posicionar tendo como referência o canto superior esquerdo do documento, se o elemento pai tiver position diferente de static, o elemento filho terá o elemento pai como referência; sticky - baseado na rolagem na página)
